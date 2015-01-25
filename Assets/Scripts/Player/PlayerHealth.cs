@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
     // A reference to the player's movement which defined on PlayerMovement.cs
     PlayerMovement playerMovement;
 
-    //PlayerShooting playerShooting;
+    PlayerShooting playerShooting;
 
     // Whether the player is dead
     bool isDead;
@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
         anim = GetComponent <Animator> ();
         playerAudio = GetComponent <AudioSource> ();
         playerMovement = GetComponent <PlayerMovement> ();
-        //playerShooting = GetComponentInChildren <PlayerShooting> ();
+        playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
     }
 
@@ -97,7 +97,7 @@ public class PlayerHealth : MonoBehaviour
         // Set flag *isDead* so that it won't be called twiced
         isDead = true;
 
-        //playerShooting.DisableEffects ();
+        playerShooting.DisableEffects ();
 
         // Instruct the animator that player is dead
         anim.SetTrigger ("Die");
@@ -110,7 +110,7 @@ public class PlayerHealth : MonoBehaviour
 
         // Disable movment script
         playerMovement.enabled = false;
-        //playerShooting.enabled = false;
+        playerShooting.enabled = false;
     }
 
 

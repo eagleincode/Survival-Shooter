@@ -19,7 +19,7 @@ public class EnemyAttack : MonoBehaviour
     // NOTE1: Class::PlayerHealth is defined on PlayerHealth.cs
     PlayerHealth playerHealth;
 
-    //EnemyHealth enemyHealth;
+    EnemyHealth enemyHealth;
 
     // Whether player is close enough for bunny to attack
     bool playerInRange;
@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag ("Player");
         playerHealth = player.GetComponent <PlayerHealth> ();
-        //enemyHealth = GetComponent<EnemyHealth>();
+        enemyHealth = GetComponent<EnemyHealth> ();
         anim = GetComponent <Animator> ();
     }
 
@@ -58,7 +58,11 @@ public class EnemyAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= timeBetweenAttacks && playerInRange/* && enemyHealth.currentHealth > 0*/) {
+        if (
+            timer >= timeBetweenAttacks &&
+            playerInRange &&
+            enemyHealth.currentHealth > 0
+        ) {
             Attack ();
         }
 
