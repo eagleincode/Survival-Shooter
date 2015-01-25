@@ -4639,6 +4639,7 @@ GameObject:
   - 136: {fileID: 1777260656}
   - 82: {fileID: 1777260655}
   - 114: {fileID: 1777260654}
+  - 114: {fileID: 1777260660}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4779,6 +4780,24 @@ Transform:
   - {fileID: 1932803805}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!114 &1777260660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1777260653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 544f2064df03e95419b4a5147c506b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 336170044}
+  damageImage: {fileID: 171827110}
+  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
+  flashSpeed: 5
+  flashColour: {r: 1, g: 0, b: 0, a: .100000001}
 --- !u!1 &1789590652
 GameObject:
   m_ObjectHideFlags: 0
