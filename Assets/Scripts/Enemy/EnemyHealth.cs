@@ -111,7 +111,7 @@ public class EnemyHealth : MonoBehaviour
 
         // Set flag *isSinking* true
         isSinking = true;
-        //ScoreManager.score += scoreValue;
+        ScoreManager.score += scoreValue;
 
         // Destroy this instance after it dies for 2 seconds
         Destroy (gameObject, 2f);
