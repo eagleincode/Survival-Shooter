@@ -1837,6 +1837,7 @@ GameObject:
   - 136: {fileID: 421058863}
   - 82: {fileID: 421058864}
   - 195: {fileID: 421058865}
+  - 114: {fileID: 421058866}
   m_Layer: 9
   m_Name: Zombunny
   m_TagString: Untagged
@@ -1992,6 +1993,17 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &421058866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421058858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f6618a0da65fa45b24d5105d5d8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &467928716
 GameObject:
   m_ObjectHideFlags: 0
